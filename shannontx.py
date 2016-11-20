@@ -25,8 +25,14 @@ for step2 in probability:
     entropy = entropy + (step2 * math.log((1.0 / step2), 2))
 entpw = entropy/textlenght
 
-
-print("Total word entropy: ")
+print(" ")
+print("WORDLIST USED: ")
+print(" ")
+wordlist.sort()
+print(wordlist)
+print(" ")
+print(" ")
+print("Total words entropy: ")
 print(entropy)
 print(" ")
 print("Entropy per written word:")
