@@ -23,6 +23,12 @@ with open('file.txt', 'r') as text:  # File opening is already I/O buffered ;-)
                 wordlist.append(word)
                 wordcount.append(1)
 
+wordlist.sort()  # The wordlist must be alphabetically-ordered to proceed
+
+if wordlist[0] == "'":  # If the wordlist contains the word "'"...
+    del wordlist[0]  # ...it should be removed...
+    del wordcount[0]  # ...like its counter.
+
 textlenght = sum(wordcount)
 for step1 in wordcount:
     probability.append(step1/textlenght)
@@ -32,7 +38,6 @@ for step2 in probability:
 print(" ")  # This empty lines are just typesetting-sugar
 print("WORDLIST USED: ")
 print(" ")
-wordlist.sort()  # The wordlist printed is alphabetically-ordered
 print(wordlist)
 print(" ")
 print(" ")
