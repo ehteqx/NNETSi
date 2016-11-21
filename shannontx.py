@@ -1,7 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-import math
+import math  # Necessary to invoke the logarithmic functions
+import re  # Necessary to use regular expressions in word parsing
 
 wordlist = list()
 wordcount = list()
@@ -10,7 +11,8 @@ entropy = 0.0
 
 with open('file.txt', 'r') as text:
     for line in text:
-        for word in line.split():
+        # The line that follows contains a RegExp. Contracted words count as one.
+        for word in re.findall(r"[\w']+", line):
             if word in wordlist:
                 wordcount[wordlist.index(word)] = wordcount[wordlist.index(word)] + 1
             else:
