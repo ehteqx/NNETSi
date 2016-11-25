@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# textropy - An efficient and straightforward word entropy analyzer
+# textropy - An efficient word entropy calculator
 # (C) 2016 - Emanuele Ballarin <emanuele@ballarin.cc>
 
 import math  # Necessary to invoke logarithmic functions
